@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://sdk.upmem.com/stable/ (User Manual - toolchain, debugging, support sections)
+name: UPMEM DPU SDK toolchain
+install:
+- method: apt (UPMEM PPA)
+  command: sudo apt install upmem upmem-driver-dkms upmem-firmware
+  repo: http://upmem-sdk.s3.amazonaws.com/
+- method: deb/rpm packages
+  url: https://sdk.upmem.com/
+- method: tarball
+  url: https://sdk.upmem.com/
+  note: source upmem_env.sh to set up the environment (accepts a `simulator` option)
+commands:
+- group: compile
+  tools:
+  - name: dpu-upmem-dpurte-clang
+    description: LLVM/Clang-based C compiler targeting the DPU (produces DPU binaries);
+      -save-temps generates the report files UPMEM support asks for in bug reports.
+    docs: https://sdk.upmem.com/stable/00_ToolchainAtAGlance.html
+  - name: dpu-pkg-config
+    description: pkg-config helper for building host applications against the DPU host library.
+    docs: https://sdk.upmem.com/stable/02_HelloWorld.html
+- group: debug
+  tools:
+  - name: dpu-lldb
+    description: LLDB-based debugger for DPU programs (attach to DPUs, step, breakpoints).
+    docs: https://sdk.upmem.com/stable/080_AboutDPULLDB.html
+  - name: dpu-lldb-attach-dpu
+    description: Attach to a DPU without a host application.
+    docs: https://sdk.upmem.com/stable/084_DPUDebugAttachWithoutHost.html
+  - name: dputrace
+    description: Trace tool for DPU executions (trace files, host traces, watch mode).
+    docs: https://sdk.upmem.com/stable/087_DPUTrace.html
+  - name: dpugrind
+    description: Valgrind-style verification of DPU memory accesses.
+    docs: https://sdk.upmem.com/stable/088_DPUMemcheck.html
+- group: diagnostics
+  tools:
+  - name: dpu-diag
+    description: Environment/hardware diagnostic tool (support requests its output;
+      2025.1.0 adds an option to disable DPUs with IRAM/WRAM defects).
+    docs: https://sdk.upmem.com/stable/ggg_ReportingErrors.html
+  - name: dpu-profiling
+    description: Profile DPU binaries and applications.
+    docs: https://sdk.upmem.com/stable/260_Profiling.html
+notes: >-
+  These are local hardware-toolchain CLIs shipped in the SDK packages catalogued in
+  packages/upmem-packages.yml, not a hosted-API CLI.

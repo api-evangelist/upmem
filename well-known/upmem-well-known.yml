@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/ on apis.yml + docs hosts
+notes: >-
+  No well-known discovery documents are published. The corporate website
+  (www.upmem.com) is offline - TLS handshake fails and the origin returns
+  "404 Vhost unknown" over HTTP - so its well-known surface is unreachable.
+  The live SDK documentation host (sdk.upmem.com) returns 404 for every
+  probed path. No raw files were saved (nothing returned 200).
+hosts:
+- host: https://sdk.upmem.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://www.upmem.com
+  unreachable: true
+  detail: TLS handshake failure on 443; HTTP 80 returns "404 Vhost unknown" (Gandi Varnish)
+  documents:
+  - path: /.well-known/security.txt
+    status: 0

@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://sdk.upmem.com/ + https://pypi.org/project/dpu-kmeans/
+notes: >-
+  UPMEM ships its developer surface as the UPMEM DPU SDK (C toolchain, host libraries,
+  kernel driver, firmware) distributed from sdk.upmem.com and an APT PPA on S3, not
+  through mainstream package registries. One first-party Python package (dpu-kmeans)
+  is published on PyPI by an upmem.com maintainer. PyPI names scikit-dpu, upmem, and
+  upmem-llm-framework were probed and do not exist (404).
+packages:
+- language: python
+  registry: pypi
+  name: dpu-kmeans
+  version: 0.2.4
+  url: https://pypi.org/project/dpu-kmeans/
+  install: pip install dpu-kmeans
+  official: true
+  maintainer: Sylvan Brocard <sbrocard@upmem.com>
+  description: A package for the k-means algorithm on DPU.
+  repository: https://github.com/upmem/dpu_kmeans
+  docs: https://sdk.upmem.com/dpu_kmeans/
+- language: c
+  registry: vendor
+  name: upmem (UPMEM DPU SDK)
+  version: 2025.1.0
+  url: https://sdk.upmem.com/
+  install: sudo apt install upmem upmem-driver-dkms upmem-firmware  # via UPMEM PPA
+  official: true
+  description: >-
+    UPMEM DPU SDK - dpu-upmem-dpurte-clang compiler, DPU runtime library, C/C++
+    host libraries, Java and Python host bindings, dpu-lldb debugger. Distributed
+    as tarball/deb/rpm for Debian 10, Ubuntu 20.04/22.04 LTS, Rocky 8.
+  ppa: http://upmem-sdk.s3.amazonaws.com/
+- language: java
+  registry: vendor
+  name: UPMEM Java Library (bundled in SDK)
+  url: https://sdk.upmem.com/stable/206_JavaAPI.html
+  official: true
+  description: Java host API for controlling DPUs, shipped inside the UPMEM SDK.
+- language: python
+  registry: vendor
+  name: UPMEM Python Library (bundled in SDK)
+  url: https://sdk.upmem.com/stable/PythonAPI/modules.html
+  official: true
+  description: Python host API for controlling DPUs, shipped inside the UPMEM SDK.

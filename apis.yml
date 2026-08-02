@@ -1,9 +1,29 @@
 aid: upmem
 name: Upmem
-description: 'Upmem is a company surfaced as a portfolio company of partech and added to the API Evangelist
-  network as a stub for enrichment. Sector: Applicative SaaS. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  UPMEM is a French fabless semiconductor company pioneering Processing-In-Memory
+  (PIM). Its Data Processing Units (DPUs) are embedded directly in DRAM on standard
+  DIMM modules, putting thousands of programmable cores inside memory to accelerate
+  data-intensive workloads such as analytics, genomics, and AI inference. Developers
+  program DPUs in C using the UPMEM DPU SDK (LLVM-based compiler, DPU runtime,
+  C/C++/Java/Python host libraries, dpu-lldb debugger, and a functional simulator),
+  distributed from sdk.upmem.com and an APT PPA. UPMEM publishes no hosted web API;
+  its developer surface is the SDK and an open-source GitHub organization. The
+  corporate website (www.upmem.com) is offline as of 2026-07-21, while the SDK
+  documentation and release archive remain live.
 url: https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://sdk.upmem.com/2025.1.0/_static/UPMEM.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +32,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-- Applicative Saas
+- Semiconductors
+- Processing In Memory
+- Hardware Acceleration
+- Data Processing
+- Developer Tools
+- SDK
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +50,32 @@ maintainers:
 common:
 - type: Website
   url: http://www.upmem.com/
+- type: Documentation
+  url: https://sdk.upmem.com/stable/
+- type: GettingStarted
+  url: https://sdk.upmem.com/stable/02_HelloWorld.html
+- type: Support
+  url: https://sdk.upmem.com/stable/ggg_ReportingErrors.html
+- type: GitHubOrganization
+  url: https://github.com/upmem
+- type: Packages
+  url: packages/upmem-packages.yml
+- type: SDKs
+  url: packages/upmem-packages.yml
+- type: CLI
+  url: cli/upmem-cli.yml
+- type: Sandbox
+  url: sandbox/upmem-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/upmem-lifecycle.yml
+- type: ChangeLog
+  url: changelog/upmem-changelog.yml
+- type: LLMsTxt
+  url: llms/upmem-llms.txt
+- type: DomainSecurity
+  url: security/upmem-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://sdk.upmem.com/stable/ggg_ReleaseNotesAndKnownIssues.html
+scheme: year.release.patch, per-SDK-release notes (no per-entry dates published)
+current_version: 2025.1.0
+entries:
+- version: 2025.1.0
+  date: null
+  breaking: false
+  highlights:
+  - Implement udev cache (improves DPU allocation performance)
+  - 'LLDB: reduce memory transfer when transferring unaligned data during debug'
+  - 'dpu-diag: option to disable DPUs with IRAM or WRAM defects'
+  - Fix conditions where a subset of valid DPUs would become unusable
+  - 'upmem_utilities: add pyelftools dependency (dpu_sections, dpu_statistics)'
+  - Fix DPU toolchain file for CMake
+  deprecations:
+  - Systems with Linux kernel older than 6.8 will be deprecated in future releases
+  - Ubuntu 22.04 LTS will only be supported with the HWE stack and kernel 6.8
+- version: 2024.2.0
+  date: null
+  breaking: false
+  highlights:
+  - Implement WRAM access in parallel of DPU execution
+  - Add DPU v1B performance counters
+  - Add chip versioning tags to DPU binaries
+  - dpu.h now exports most of the DPU API (IWYU)
+  - Run-time library documentation moved to doxygen format; dark mode docs
+  - Document UPMEM PPA and UPMEM_PROFILE
+  - 'Functional simulator: remove broken nrDpusPerCi option'
+- version: 2024.1.0
+  date: null
+  breaking: false
+  highlights:
+  - Add support for V1B UPMEM DIMMs on Ubuntu 22.04 and Debian 10
+  - Fix performance degradation (Gather Data Sampling mitigation era)
+notes: >-
+  The release notes page documents the recent window verbatim; older releases
+  (2019.1.0-2023.2.0) are listed with downloadable artifacts on sdk.upmem.com.
+  UPMEM does not publish calendar dates per release on this page.

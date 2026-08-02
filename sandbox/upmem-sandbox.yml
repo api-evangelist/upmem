@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://sdk.upmem.com/stable/01_Install.html#functional-simulator
+kind: functional-simulator
+summary: >-
+  The UPMEM DPU SDK integrates a functional simulator, so developers can build and
+  run DPU programs with no UPMEM hardware installed. A program that finds no UPMEM
+  DIMMs in the system automatically falls back to the simulator - no configuration
+  needed; with real hardware present the code executes on hardware.
+test_vs_live:
+  detection: automatic - runtime maps to the simulator when no UPMEM DIMMs are found
+  force_simulator: source $HOME/upmem-sdk/upmem_env.sh simulator
+limits:
+  virtual_ranks: single-chip ranks; 1 DPU per chip by default
+  max_chips: 64
+  max_dpus: 64
+fidelity:
+  functional: true
+  cycle_accurate: false
+  note: Instruction counts are accurate; cycle counts must not be relied on.
+notes: >-
+  This is the sandbox surface of a hardware SDK (simulate the DPU platform), not a
+  hosted API test mode. No test credentials or magic values exist or are needed.

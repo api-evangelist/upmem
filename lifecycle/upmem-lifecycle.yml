@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+source: https://sdk.upmem.com/ + https://sdk.upmem.com/stable/ggg_ReleaseNotesAndKnownIssues.html
+versioning:
+  scheme: year.release.patch (e.g. 2025.1.0)
+  current: 2025.1.0
+  docs: https://sdk.upmem.com/
+  channels:
+  - stable (https://sdk.upmem.com/stable/ tracks the latest stable SDK docs)
+  released_versions:
+  - 2025.1.0
+  - 2024.2.0
+  - 2024.1.0
+  - 2023.2.0
+  - 2023.1.0
+  - 2021.4.0
+  - 2021.3.0
+  - 2021.2.0
+  - 2021.1.3
+  - 2021.1.2
+  - 2021.1.1
+  - 2021.1.0
+  - 2020.5.1
+  - 2020.5.0
+  - 2020.4.0
+  - 2020.3.0
+  - 2020.2.1
+  - 2020.2.0
+  - 2020.1.0
+  - 2019.4.0
+  - 2019.3.0
+  - 2019.2.0
+  - 2019.1.0
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal API deprecation policy is published. Release notes carry forward-looking
+    platform deprecations, e.g. "In future releases, all systems with a Linux kernel
+    older than version 6.8 will be deprecated" and Ubuntu 22.04 LTS support narrowing
+    to the HWE kernel 6.8 (2025.1.0 release notes).
+sla: null
+status_page: null
+release_notes: https://sdk.upmem.com/stable/ggg_ReleaseNotesAndKnownIssues.html
+support_matrix:
+  note: Per-release OS / DPU (V1A, V1B) support matrix published in the release notes.
+  operating_systems: [Debian 10, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS, Rocky 8]
+notes: >-
+  Lifecycle covers the UPMEM DPU SDK (hardware toolchain), not a web API. The
+  corporate website www.upmem.com is offline as of 2026-07-21; sdk.upmem.com and
+  the release archive remain live.

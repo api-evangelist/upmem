@@ -1,0 +1,26 @@
+# Upmem
+
+> UPMEM is a French fabless semiconductor company pioneering Processing-In-Memory (PIM): its Data Processing Units (DPUs) are embedded directly in DRAM on standard DIMM modules, letting data-intensive workloads run thousands of cores inside memory. Developers program DPUs in C with the UPMEM DPU SDK (compiler, runtime, host libraries, debugger, functional simulator). UPMEM publishes no hosted web API; its developer surface is the SDK. The corporate website (www.upmem.com) is offline as of 2026-07-21, while the SDK documentation and release archive remain live.
+
+## Docs
+
+- [UPMEM DPU SDK releases](https://sdk.upmem.com/): SDK downloads (tarball/deb/rpm), firmware, sources, per-version docs; latest stable 2025.1.0
+- [SDK User Manual (stable)](https://sdk.upmem.com/stable/): toolchain, programming model (tasklets, WRAM/MRAM), host APIs (C, C++, Java, Python), debugging
+- [Hello World example](https://sdk.upmem.com/stable/02_HelloWorld.html): first DPU program + host application
+- [Release notes](https://sdk.upmem.com/stable/ggg_ReleaseNotesAndKnownIssues.html): per-release changes and OS/DPU support matrix
+- [Functional simulator](https://sdk.upmem.com/stable/01_Install.html#functional-simulator): run DPU programs without hardware (up to 64 simulated DPUs)
+
+## Code
+
+- [GitHub organization](https://github.com/upmem): 44 repos - llvm-project (DPU compiler), dpu_demo, dpu_kmeans, scikit-dpu, upmem_llm_framework, PIM-Embedding-Lookup, SparseP, pim-lucene
+- [dpu-kmeans on PyPI](https://pypi.org/project/dpu-kmeans/): first-party k-means-on-DPU Python package
+
+## Catalog artifacts
+
+- [APIs.json profile](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/apis.yml)
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/packages/upmem-packages.yml)
+- [CLI toolchain](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/cli/upmem-cli.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/lifecycle/upmem-lifecycle.yml)
+- [Changelog](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/changelog/upmem-changelog.yml)
+- [Sandbox (simulator)](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/sandbox/upmem-sandbox.yml)
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/security/upmem-domain-security.yml)
