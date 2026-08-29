@@ -12,6 +12,17 @@ description: >-
   corporate website (www.upmem.com) is offline as of 2026-07-21, while the SDK
   documentation and release archive remain live.
 url: https://raw.githubusercontent.com/api-evangelist/upmem/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
